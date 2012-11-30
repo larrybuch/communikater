@@ -1,0 +1,19 @@
+<h1>Communikatr</h1>
+
+
+<%= form_tag '/messages', :remote => true do %>
+  <%= radio_button_tag :method, 'text' %>
+  <%= label_tag 'Text' %>
+  <%= radio_button_tag :method, 'email' %>
+  <%= label_tag 'Email' %>
+  <%= radio_button_tag :method, 'twitter' %>
+  <%= label_tag 'Twitter' %>
+
+<br>
+
+  <%= label_tag 'To:' %>
+  <%= text_field_tag 'to' %>
+  <%= label_tag 'Message:' %>
+  <%= text_area_tag 'msg' %>
+  <%= submit_tag 'Send Text Message', :id => "messages_button" %>
+<% end %>
