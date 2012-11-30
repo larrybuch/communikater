@@ -6,9 +6,9 @@ class Communikatr < ActionMailer::Base
   #
   #   en.communikatr.email.subject
   #
-  def email
-    @greeting = "hey man."
-
-    mail to: "raycchan@gmail.com"
+  def email(to, msg)
+    @msg = msg
+    @to = to
+    mail to: to
   end
 end

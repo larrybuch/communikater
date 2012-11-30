@@ -2,12 +2,20 @@ class HomeController < ApplicationController
 
   before_filter :allow_cross_origin_access
   protect_from_forgery :except => :text
+  protect_from_forgery :except => :email
+  protect_from_forgery :except => :twitter
 
   def twitter
-    from = "@romneyslogo"
+    Twitter.configure do |config|
+      config.consumer_key = TWEET_CS_KEY
+      config.consumer_secret = TWEET_CS_SEC
+      config.oauth_token = TWEET_OA_TOK
+      config.oauth_token_secret = TWEET_OA_SEC
+    end
+
     tweet = params[:msg]
-    Twitter::Client.new
-    client.update(tweet)
+    binding.pry
+    Twitter.update(tweet)
   end
 
   def text
@@ -28,6 +36,11 @@ class HomeController < ApplicationController
   end
 
   def email
+
+    @to = params[:to]
+    @msg = params[:msg]
+
+    Communikatr.email(@to, @msg).deliver
   end
 
   private
