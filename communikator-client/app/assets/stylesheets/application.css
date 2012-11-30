@@ -11,3 +11,8 @@
  *= require_self
  *= require_tree .
  */
+
+#message-box input, #message-box label {
+  display: block;
+  padding: 10px;
+}
