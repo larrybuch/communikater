@@ -14,7 +14,6 @@ class HomeController < ApplicationController
     end
 
     tweet = params[:msg]
-    binding.pry
     Twitter.update(tweet)
   end
 
