@@ -1,8 +1,13 @@
 class HomeController < ApplicationController
 
   before_filter :allow_cross_origin_access
+  protect_from_forgery :except => :text
 
   def twitter
+    from = "@romneyslogo"
+    tweet = params[:msg]
+    Twitter::Client.new
+    client.update(tweet)
   end
 
   def text
@@ -14,9 +19,11 @@ class HomeController < ApplicationController
     @msg = @client.account.sms.messages.create({:from => from_phone, :to => to_phone, :body => txt})
     @account = @client.account
 
+    @success = "Success!"
+
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @msg }
+      format.json { render json: @success }
     end
   end
 
