@@ -6,14 +6,14 @@ $(function(){
 
 
 function text() {
-  alertify.success("Your text has been sent!");
+
 
   var message_to = $('#to').val();
   var message_text = $('#msg').val();
 
   $.ajax({
   type: "POST",
-  url: "http://3mu8.localtunnel.com/text",
+  url: "http://4zq6.localtunnel.com/text",
   data: { to: message_to, msg: message_text }
   }).done(function( msg ) {
       alert('msg');
@@ -23,7 +23,7 @@ function text() {
 }
 
 function email() {
-  alertify.success("Your email has been sent!");
+
 
   var message_to = $('#to').val();
   var message_text = $('#msg').val();
@@ -31,7 +31,7 @@ function email() {
 
   $.ajax({
   type: "POST",
-  url: "http://3mu8.localtunnel.com/email",
+  url: "http://4zq6.localtunnel.com/email",
   data: { to: message_to, msg: message_text }
   }).done(function( msg ) {
       alert('msg');
@@ -39,14 +39,14 @@ function email() {
 }
 
 function twitter() {
-  alertify.success("Your tweet has been sent!");
+
 
   var message_to = $('#to').val();
   var message_text = $('#msg').val();
 
   $.ajax({
   type: "POST",
-  url: "http://3mu8.localtunnel.com/twitter",
+  url: "http://4zq6.localtunnel.com/twitter",
   data: { to: message_to, msg: message_text }
   }).done(function( msg ) {
       alert('msg');
