@@ -16,8 +16,8 @@
 
 <br>
   <div id="feature_form">
-    <%= text_field_tag 'to', 'To (enter phone # or email)' %>
-    <%= text_area_tag 'msg', 'Message' %>
+    <%= text_field_tag 'to', nil, :placeholder => 'To (enter phone # or email)' %>
+    <%= text_area_tag 'msg', nil, :placeholder => 'Message' %>
     <%= submit_tag 'Send Message', :id => "messages_button" %>
   </div>
 <% end %>

@@ -1,9 +1,9 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: communikator_development
+  database: communikatr_development
   pool: 5
   host: localhost
-  username: larrybuch
+  username: postgres
   password:
 

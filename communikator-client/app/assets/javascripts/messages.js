@@ -6,6 +6,7 @@ $(function(){
 
 
 function text() {
+  alertify.success("Your text has been sent!");
 
   var message_to = $('#to').val();
   var message_text = $('#msg').val();
@@ -17,13 +18,15 @@ function text() {
   }).done(function( msg ) {
       alert('msg');
   });
+
+
 }
 
 function email() {
+  alertify.success("Your email has been sent!");
 
   var message_to = $('#to').val();
   var message_text = $('#msg').val();
-
 
 
   $.ajax({
@@ -36,6 +39,7 @@ function email() {
 }
 
 function twitter() {
+  alertify.success("Your tweet has been sent!");
 
   var message_to = $('#to').val();
   var message_text = $('#msg').val();
