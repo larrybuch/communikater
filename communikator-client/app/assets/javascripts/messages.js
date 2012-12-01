@@ -2,6 +2,8 @@ $(function(){
 
 });
 
+
+
 function text() {
 
   var message_to = $('#to').val();
