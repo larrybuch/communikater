@@ -1,5 +1,6 @@
 $(function(){
 
+
 });
 
 
@@ -11,7 +12,7 @@ function text() {
 
   $.ajax({
   type: "POST",
-  url: "http://4xma.localtunnel.com/text",
+  url: "http://3mu8.localtunnel.com/text",
   data: { to: message_to, msg: message_text }
   }).done(function( msg ) {
       alert('msg');
@@ -27,7 +28,7 @@ function email() {
 
   $.ajax({
   type: "POST",
-  url: "http://4xma.localtunnel.com/email",
+  url: "http://3mu8.localtunnel.com/email",
   data: { to: message_to, msg: message_text }
   }).done(function( msg ) {
       alert('msg');
@@ -41,7 +42,7 @@ function twitter() {
 
   $.ajax({
   type: "POST",
-  url: "http://4xma.localtunnel.com/twitter",
+  url: "http://3mu8.localtunnel.com/twitter",
   data: { to: message_to, msg: message_text }
   }).done(function( msg ) {
       alert('msg');
